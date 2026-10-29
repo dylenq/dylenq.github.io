@@ -29,6 +29,7 @@
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#more">More work</a>
+      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch between light and dark theme">
@@ -73,6 +74,7 @@
         <h2>About</h2>
         <p>Most of what I make starts with a device I own and a piece of software I wish existed for it. My Mac had no good system-wide equalizer, so I wrote one in Rust on top of Core Audio process taps, with no audio driver to install. My consoles sat by the TV while I wanted to play from another room, so I wrote a capture-card streamer that forwards MJPEG frames untouched and decodes them once, on the Mac, with about 12 ms of delay.</p>
         <p>I like the parts of software that sit near hardware: audio pipelines, USB protocols, V4L2 and UVC capture, and the native UI layers on macOS and Android. I also build web apps when a problem calls for one, from a booking site for a wellness practice to an offline billing system for a pool hall.</p>
+        <p>The other half of what I do is infrastructure. At home I run a Linux server with more than 20 containers: a Jellyfin media pipeline, Pi-hole DNS filtering and a reverse proxy with SSL. Before that I was the IT administrator for two gaming lounges, automating installs, updates and monitoring across 20+ machines. I now handle the IT for the wellness practice whose website I built.</p>
         <p class="belief">In the age of AI, I believe what matters is what you complete and ship, and how well you ship it. Anyone can start something now. Finishing it, polishing it and putting it in someone's hands is the part that counts.</p>
         <p>So each project ships with releases, screenshots in both themes and documentation that explains how the thing works, not just how to install it.</p>
       </div>
@@ -81,6 +83,8 @@
         <li><span class="k">Commits this year</span><span class="v">127 and counting</span></li>
         <li><span class="k">Public releases</span><span class="v">EQ 0.4.0 · capture-stream 0.2.0 · JA11 EQ 1.0 · YeetFin 0.11.0</span></li>
         <li><span class="k">Platforms</span><span class="v">macOS · Android · Linux · Web</span></li>
+        <li><span class="k">Home server</span><span class="v">Ubuntu Server, 20+ containers</span></li>
+        <li><span class="k">Languages</span><span class="v">English and Sinhala, both expert</span></li>
         <li><span class="k">On GitHub since</span><span class="v">July 2021</span></li>
       </ul>
     </div>
@@ -180,7 +184,7 @@
   <section id="more">
     <div class="wrap">
       <h2>More work</h2>
-      <p class="section-intro">Web apps, a media client and a language course. Some of these have private source; the ones with a public home are linked.</p>
+      <p class="section-intro">Infrastructure, web apps, a media client and a language course. Some of these have private source; the ones with a public home are linked.</p>
       <div class="projects more">
 
         <article class="card" data-repo="dylenq/yeetfin-releases">
@@ -192,11 +196,49 @@
           </div>
           <div class="card-body">
             <h3 class="card-title">YeetFin</h3>
-            <p>A cross-platform Jellyfin client built on Flutter, forked from Fladder and preconfigured for my own Jellyfin and Jellyseerr servers. Direct, transcoded and offline playback, intro skipping, trickplay scrubbing and comic-book reading.</p>
+            <p>A cross-platform Jellyfin client built on Flutter, forked from Fladder and preconfigured for my own Jellyfin and Jellyseerr servers. Direct, transcoded and offline playback, intro skipping, trickplay scrubbing and comic-book reading. I added custom branding and animated splash screens.</p>
             <ul class="chips"><li>Flutter</li><li>Dart</li><li>Kotlin</li><li>Swift</li><li>C++</li></ul>
             <div class="card-links">
               <a href="https://github.com/dylenq/yeetfin-releases">Releases</a>
               <span class="tag-private">source private</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media contain">
+            <svg viewBox="0 0 640 360" role="img" aria-label="Diagram: Cloudflare DNS and Tailscale reach Nginx Proxy Manager, which routes to six media containers, while Pi-hole handles DNS for the whole network" style="width:100%;height:100%">
+              <g font-family="IBM Plex Mono, monospace" stroke-width="2">
+                <path d="M174 68 L214 110 M174 152 L214 110 M364 110 L420 110" fill="none" stroke="var(--muted)"/>
+                <rect x="24" y="40" width="150" height="56" rx="8" fill="var(--surface)" stroke="var(--line)"/>
+                <text x="99" y="74" text-anchor="middle" font-size="19" fill="var(--fg)">Cloudflare</text>
+                <rect x="24" y="124" width="150" height="56" rx="8" fill="var(--surface)" stroke="var(--line)"/>
+                <text x="99" y="158" text-anchor="middle" font-size="19" fill="var(--fg)">Tailscale</text>
+                <rect x="214" y="78" width="150" height="64" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"/>
+                <text x="289" y="106" text-anchor="middle" font-size="17" fill="var(--fg)">Nginx Proxy</text>
+                <text x="289" y="128" text-anchor="middle" font-size="17" fill="var(--fg)">Manager</text>
+                <text x="420" y="40" font-size="14" fill="var(--muted)">20+ containers</text>
+                <g fill="var(--surface)" stroke="var(--line)">
+                  <rect x="420" y="56" width="100" height="44" rx="6"/><rect x="530" y="56" width="100" height="44" rx="6"/>
+                  <rect x="420" y="112" width="100" height="44" rx="6"/><rect x="530" y="112" width="100" height="44" rx="6"/>
+                  <rect x="420" y="168" width="100" height="44" rx="6"/><rect x="530" y="168" width="100" height="44" rx="6"/>
+                </g>
+                <g font-size="14" fill="var(--fg)" text-anchor="middle" stroke="none">
+                  <text x="470" y="83">Jellyfin</text><text x="580" y="83">Sonarr</text>
+                  <text x="470" y="139">Radarr</text><text x="580" y="139">Prowlarr</text>
+                  <text x="470" y="195">Bazarr</text><text x="580" y="195">Jellyseerr</text>
+                </g>
+                <rect x="24" y="252" width="606" height="52" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"/>
+                <text x="327" y="284" text-anchor="middle" font-size="18" fill="var(--fg)">Pi-hole · DNS filtering for the whole network</text>
+              </g>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Self-hosted home server</h3>
+            <p>An Ubuntu Server box running 20+ containers with Docker Compose. A fully automated media pipeline takes a request through download and subtitle fixing into the Jellyfin library. Pi-hole filters DNS for the whole network, Nginx Proxy Manager serves internal apps on public domains with SSL, and Tailscale connects it all. I also tracked down and closed an IPv6 DNS leak through the router's RADVD and DHCPv6 settings.</p>
+            <ul class="chips"><li>Ubuntu Server 24.04</li><li>Docker Compose</li><li>Pi-hole</li><li>Nginx Proxy Manager</li><li>Tailscale</li><li>Home Assistant</li></ul>
+            <div class="card-links">
+              <a href="https://play.yeetserver.org/web/#/home">Live demo (logins on request)</a>
             </div>
           </div>
         </article>
@@ -262,6 +304,85 @@
     </div>
   </section>
 
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="section-intro">Building websites and keeping other people's systems running, in the order I did it.</p>
+      <div class="jobs">
+        <article class="job">
+          <p class="when">2025 – present</p>
+          <div>
+            <h3>Full-Stack Developer</h3>
+            <p class="org">Every Mind Matters</p>
+            <ul>
+              <li>Built the organisation's website from scratch, including booking support and calendar integrations.</li>
+              <li>Manage all ongoing IT for the practice.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <p class="when">2023 – 2024</p>
+          <div>
+            <h3>RCM Associate</h3>
+            <p class="org">Innobot Health</p>
+            <ul>
+              <li>Investigated and resolved rejected claims in the healthcare revenue cycle management workflow.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <p class="when">2021 – 2022</p>
+          <div>
+            <h3>IT Administrator</h3>
+            <p class="org">Cloud Gaming Lounge</p>
+            <ul>
+              <li>Built a fully automated system for installations, updates, monitoring and usage statistics across 20+ machines.</li>
+              <li>Networked every system for an uninterrupted gaming experience.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <p class="when">2019 – 2021</p>
+          <div>
+            <h3>IT Administrator</h3>
+            <p class="org">Alpha Gaming Lounge</p>
+            <ul>
+              <li>Set up automated installation, update and monitoring workflows across 10+ machines with minimal downtime.</li>
+              <li>Built the network and the usage-statistics tracking.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <p class="when">Independent</p>
+          <div>
+            <h3>Diagnostics and repair</h3>
+            <p class="org">Computers and phones</p>
+            <ul>
+              <li>Software repairs on Windows, Linux, macOS, Android and iOS, and hardware repairs on desktops and laptops.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap edu">
+      <div>
+        <h3>Education</h3>
+        <p class="edu-title">BSc (Hons) Information Technology</p>
+        <p class="edu-meta">NSBM Green University, affiliated with Victoria University, Melbourne · 2021 – 2025</p>
+        <p class="edu-meta">Coursework included UiPath RPA workflows for attendance tracking and currency conversion.</p>
+        <p class="edu-meta">GCE Ordinary Levels, Wesley College · 2018</p>
+      </div>
+      <div>
+        <h3>Languages</h3>
+        <p class="edu-title">English · Sinhala</p>
+        <p class="edu-meta">Expert level in both.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="skills">
     <div class="wrap">
       <h2>Skills</h2>
@@ -269,15 +390,19 @@
       <div class="skills">
         <div>
           <h3>Languages</h3>
-          <ul class="chips"><li>Rust</li><li>Swift</li><li>Kotlin</li><li>TypeScript</li><li>Dart</li><li>Python</li><li>Shell</li><li>SQL</li></ul>
+          <ul class="chips"><li>Rust</li><li>Swift</li><li>Kotlin</li><li>TypeScript</li><li>Dart</li><li>Python</li><li>Shell</li><li>SQL</li><li>HTML / CSS</li></ul>
         </div>
         <div>
           <h3>Frameworks and platforms</h3>
-          <ul class="chips"><li>SwiftUI</li><li>Jetpack Compose</li><li>egui</li><li>React Native / Expo</li><li>Next.js</li><li>Flutter</li><li>Node.js</li><li>GitHub Actions</li></ul>
+          <ul class="chips"><li>SwiftUI</li><li>Jetpack Compose</li><li>egui</li><li>React Native / Expo</li><li>Next.js</li><li>Flutter</li><li>Node.js</li><li>GitHub Actions</li><li>UiPath RPA</li></ul>
         </div>
         <div>
-          <h3>Domains</h3>
-          <ul class="chips"><li>Audio DSP and biquad filters</li><li>Core Audio process taps</li><li>Android audio effects</li><li>V4L2 / UVC capture</li><li>MJPEG streaming</li><li>USB device protocols</li><li>SQLite</li><li>Docker and self-hosting</li></ul>
+          <h3>Systems and networking</h3>
+          <ul class="chips"><li>Ubuntu Server</li><li>systemd and SSH</li><li>Docker Compose</li><li>Portainer</li><li>CasaOS</li><li>Pi-hole</li><li>DHCP and DNS</li><li>IPv4 / IPv6 troubleshooting</li><li>Nginx Proxy Manager</li><li>Cloudflare</li><li>Tailscale</li><li>Home Assistant</li></ul>
+        </div>
+        <div>
+          <h3>Audio, media and data</h3>
+          <ul class="chips"><li>Audio DSP and biquad filters</li><li>Core Audio process taps</li><li>Android audio effects</li><li>V4L2 / UVC capture</li><li>MJPEG streaming</li><li>USB device protocols</li><li>REST API integration</li><li>SQLite</li></ul>
         </div>
       </div>
     </div>
