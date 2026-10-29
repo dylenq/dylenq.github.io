@@ -6,7 +6,7 @@ Plain HTML, CSS and JavaScript. No build step: edit the files and push.
 
 ## Editing
 
-- `index.html` holds every section. The hero has an HTML comment marking where to add a location line.
+- `index.html` holds every section.
 - `css/style.css` starts with the color and font tokens; both light and dark themes live there.
 - `js/main.js` handles the theme toggle, the copy-email button, the live GitHub star and release counts, and the interactive EQ curve in the hero.
 - `assets/` holds resized screenshots copied from the project repos.
