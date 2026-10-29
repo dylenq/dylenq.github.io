@@ -184,6 +184,7 @@ h2 {
 .section-intro { color: var(--muted); max-width: 60ch; margin: 0 0 2rem; }
 .prose { max-width: 66ch; }
 .prose p { margin: 0 0 1rem; text-wrap: pretty; }
+.prose .belief { font-family: var(--font-display); font-size: 1.3rem; line-height: 1.35; letter-spacing: -0.01em; border-left: 3px solid var(--accent); padding-left: 1rem; margin-block: 1.5rem; text-wrap: pretty; }
 .about-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 2.5rem; }
 @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; } }
 .facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; align-content: start; }
