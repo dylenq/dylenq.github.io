@@ -166,6 +166,9 @@ h1 {
 }
 .eq-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); margin-bottom: 0.5rem; }
 .eq-head b { color: var(--fg); font-weight: 500; }
+.term { margin: 0; padding: 1rem 1.1rem; border-radius: 8px; background: var(--bg); border: 1px solid var(--line); font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6; color: var(--fg); overflow-x: auto; }
+.term .prompt { color: var(--accent); }
+.term .muted { color: var(--muted); }
 #eq { width: 100%; height: auto; aspect-ratio: 16 / 9; touch-action: none; cursor: grab; border-radius: 6px; }
 .eq-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-top: 0.5rem; font-variant-numeric: tabular-nums; }
 

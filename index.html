@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Dylen Quyn</title>
-  <meta name="description" content="Dylen Quyn builds native audio and streaming tools for macOS, Android and Linux: a system-wide parametric EQ in Rust, low-latency HDMI capture streaming in Swift, and more.">
+  <meta name="description" content="Dylen Quyn is a systems and network administrator and developer in Sri Lanka: a self-hosted Linux server with 25+ containers, a gaming cafe management system, and open-source apps for macOS, Android and Linux.">
   <meta property="og:title" content="Dylen Quyn">
-  <meta property="og:description" content="Native audio and streaming tools for macOS, Android and Linux. Open source on GitHub as dylenq.">
+  <meta property="og:description" content="Systems and network administrator and developer: Linux, Docker, networking, and software that ships. GitHub: dylenq.">
   <meta property="og:url" content="https://dylenq.github.io/">
   <meta property="og:image" content="https://dylenq.github.io/assets/eq-macos-dark.png">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -27,8 +27,8 @@
     <a class="brand" href="#top">dylen<b>q</b></a>
     <nav class="nav" aria-label="Sections">
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#more">More work</a>
+      <a href="#more">Systems work</a>
+      <a href="#projects">Apps</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
@@ -44,12 +44,13 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">Dylen Quyn · software developer</p>
-        <h1>Native audio and streaming tools, built close to the metal.</h1>
-        <p class="lede">I make the tools I wish existed for the gear I own: EQs, capture streamers and the odd web app. Most of it ships as open source with a README you can actually follow.</p>
+        <p class="eyebrow">Dylen Quyn · systems administrator and developer</p>
+        <h1>I keep systems running, and build the software they need.</h1>
+        <p class="lede">Linux servers, networks and Windows PCs, from DNS and reverse proxies to lock agents and backups. When nothing off the shelf fits, I build it: cafe management software, client websites, and open-source apps for macOS, Android and Linux.</p>
         <ul class="hero-meta">
           <li>GitHub: dylenq</li>
-          <li>Rust · Swift · Kotlin · TypeScript</li>
+          <li>Linux · Docker · Networking</li>
+          <li>C# · Rust · Swift · TypeScript</li>
         </ul>
         <div class="cta">
           <a class="btn btn-primary" href="https://github.com/dylenq">
@@ -57,13 +58,25 @@
             GitHub
           </a>
           <a class="btn" href="mailto:dylenquyn2003@gmail.com">Email me</a>
+          <a class="btn" href="assets/Dylen_Demian_Quyn_CV.pdf" download>Download CV</a>
           <a class="btn" href="#projects">See the projects</a>
         </div>
       </div>
-      <div class="eq-panel" aria-label="Interactive parametric EQ curve">
-        <div class="eq-head"><span><b>Parametric EQ</b> · drag a band</span><span>48 kHz · RBJ biquads</span></div>
-        <canvas id="eq" width="640" height="360" role="img" aria-label="Frequency response of four EQ bands from 20 Hz to 20 kHz. Drag the numbered points to change each band's frequency and gain."></canvas>
-        <div class="eq-foot"><span id="eq-readout"></span></div>
+      <div class="eq-panel" aria-label="Some of the services running on my home server">
+        <div class="eq-head"><span><b>Home server</b> · Ubuntu Server 24.04</span><span>25+ containers</span></div>
+        <pre class="term"><span class="muted"># a few of the running services</span>
+jellyfin
+pihole
+portainer
+tailscale
+cloudflare-ddns
+home-assistant
+scrutiny
+emm-website
+lovelle-web
+billiards-pub
+<span class="muted">…and more</span></pre>
+        <div class="eq-foot"><span>Docker Compose · CasaOS · Nginx Proxy Manager</span><span>Cloudflare · Tailscale</span></div>
       </div>
     </div>
   </section>
@@ -72,28 +85,191 @@
     <div class="wrap about-grid">
       <div class="prose">
         <h2>About</h2>
-        <p>Most of what I make starts with a device I own and a piece of software I wish existed for it. My Mac had no good system-wide equalizer, so I wrote one in Rust on top of Core Audio process taps, with no audio driver to install. My consoles sat by the TV while I wanted to play from another room, so I wrote a capture-card streamer that forwards MJPEG frames untouched and decodes them once, on the Mac, with about 12 ms of delay.</p>
-        <p>I like the parts of software that sit near hardware: audio pipelines, USB protocols, V4L2 and UVC capture, and the native UI layers on macOS and Android. I also build web apps when a problem calls for one, from a booking site for a wellness practice to an offline billing system for a pool hall.</p>
-        <p>The other half of what I do is infrastructure. At home I run a Linux server with more than 20 containers: a Jellyfin media pipeline, Pi-hole DNS filtering and a reverse proxy with SSL. Before that I was the IT administrator for two gaming lounges, automating installs, updates and monitoring across 20+ machines. I now handle the IT for the wellness practice whose website I built.</p>
+        <p>I started in IT as the administrator for two gaming lounges, automating installs, updates and monitoring across 20+ machines and keeping their networks up. Today I run a Linux server at home with more than 25 containers: Pi-hole DNS filtering, a reverse proxy with SSL, Tailscale for remote access, a Jellyfin media pipeline, and test deployments of my clients' websites. I also handle the domain, DNS and staff devices for a wellness practice whose booking system I built.</p>
+        <p>When the tools I need don't exist, I build them. Gaming cafes like the ones I used to run needed a way to lock PCs and switch off TVs when paid time ends, so I wrote Cafe Manager: a Windows-service server, a lock agent on every PC and Wake-on-LAN control of the TVs. My Mac had no good system-wide equalizer, so I wrote one in Rust on Core Audio process taps. My consoles sat by the TV, so I wrote a capture-card streamer with a Linux service at one end and a native Mac app at the other.</p>
+        <p>I like the parts of software that sit near hardware and networks: Linux services, USB and serial devices, LAN protocols, and the native layers on Windows, macOS and Android. I also build web apps when a problem calls for one, from a booking site to an online gift shop.</p>
         <p class="belief">In the age of AI, I believe what matters is what you complete and ship, and how well you ship it. Anyone can start something now. Finishing it, polishing it and putting it in someone's hands is the part that counts.</p>
         <p>So each project ships with releases, screenshots in both themes and documentation that explains how the thing works, not just how to install it.</p>
       </div>
       <ul class="facts">
         <li><span class="k">GitHub</span><span class="v"><a href="https://github.com/dylenq">github.com/dylenq</a></span></li>
-        <li><span class="k">Commits this year</span><span class="v">127 and counting</span></li>
-        <li><span class="k">Public releases</span><span class="v">EQ 0.4.0 · capture-stream 0.2.0 · JA11 EQ 1.0 · YeetFin 0.11.0</span></li>
-        <li><span class="k">Platforms</span><span class="v">macOS · Android · Linux · Web</span></li>
-        <li><span class="k">Home server</span><span class="v">Ubuntu Server, 20+ containers</span></li>
-        <li><span class="k">Languages</span><span class="v">English and Sinhala, both expert</span></li>
+        <li><span class="k">Releases</span><span class="v">EQ 0.6.0 · capture-stream 0.3.0 · Cafe Manager 1.0 · JA11 EQ 1.0</span></li>
+        <li><span class="k">Platforms</span><span class="v">Linux · Windows · macOS · Android · Web</span></li>
+        <li><span class="k">Home server</span><span class="v">Ubuntu Server, 25+ containers</span></li>
+        <li><span class="k">Languages</span><span class="v">English and Sinhala, fluent in both</span></li>
         <li><span class="k">On GitHub since</span><span class="v">July 2021</span></li>
       </ul>
     </div>
   </section>
 
+  <section id="more">
+    <div class="wrap">
+      <h2>Systems and client work</h2>
+      <p class="section-intro">Infrastructure, client projects, a cafe system and some hardware. Most of this source is private; the public ones are linked.</p>
+      <div class="projects more">
+
+        <article class="card">
+          <div class="card-media contain">
+            <svg viewBox="0 0 640 360" role="img" aria-label="Diagram: Cloudflare DNS and Tailscale reach Nginx Proxy Manager, which routes to six media containers, while Pi-hole handles DNS for the whole network" style="width:100%;height:100%">
+              <g font-family="IBM Plex Mono, monospace" stroke-width="2">
+                <path d="M174 68 L214 110 M174 152 L214 110 M364 110 L420 110" fill="none" stroke="var(--muted)"/>
+                <rect x="24" y="40" width="150" height="56" rx="8" fill="var(--surface)" stroke="var(--line)"/>
+                <text x="99" y="74" text-anchor="middle" font-size="19" fill="var(--fg)">Cloudflare</text>
+                <rect x="24" y="124" width="150" height="56" rx="8" fill="var(--surface)" stroke="var(--line)"/>
+                <text x="99" y="158" text-anchor="middle" font-size="19" fill="var(--fg)">Tailscale</text>
+                <rect x="214" y="78" width="150" height="64" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"/>
+                <text x="289" y="106" text-anchor="middle" font-size="17" fill="var(--fg)">Nginx Proxy</text>
+                <text x="289" y="128" text-anchor="middle" font-size="17" fill="var(--fg)">Manager</text>
+                <text x="420" y="40" font-size="14" fill="var(--muted)">25+ containers</text>
+                <g fill="var(--surface)" stroke="var(--line)">
+                  <rect x="420" y="56" width="100" height="44" rx="6"/><rect x="530" y="56" width="100" height="44" rx="6"/>
+                  <rect x="420" y="112" width="100" height="44" rx="6"/><rect x="530" y="112" width="100" height="44" rx="6"/>
+                  <rect x="420" y="168" width="100" height="44" rx="6"/><rect x="530" y="168" width="100" height="44" rx="6"/>
+                </g>
+                <g font-size="14" fill="var(--fg)" text-anchor="middle" stroke="none">
+                  <text x="470" y="83">Jellyfin</text><text x="580" y="83">Sonarr</text>
+                  <text x="470" y="139">Radarr</text><text x="580" y="139">Prowlarr</text>
+                  <text x="470" y="195">Bazarr</text><text x="580" y="195">Jellyseerr</text>
+                </g>
+                <rect x="24" y="252" width="606" height="52" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"/>
+                <text x="327" y="284" text-anchor="middle" font-size="18" fill="var(--fg)">Pi-hole · DNS filtering for the whole network</text>
+              </g>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Self-hosted home server</h3>
+            <p>An Ubuntu Server box running 25+ containers with Docker Compose and Portainer, including test deployments of my clients' websites. A fully automated media pipeline takes a request through download and subtitle fixing into the Jellyfin library. Pi-hole filters DNS for the whole network, Nginx Proxy Manager serves internal apps on public domains with SSL, and Tailscale connects it all. I also tracked down and closed an IPv6 DNS leak through the router's RADVD and DHCPv6 settings.</p>
+            <ul class="chips"><li>Ubuntu Server 24.04</li><li>Docker Compose</li><li>Pi-hole</li><li>Nginx Proxy Manager</li><li>Tailscale</li><li>Windows services</li><li>Home Assistant</li><li>ESPHome</li></ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media contain">
+            <svg viewBox="0 0 640 360" role="img" aria-label="Diagram: the Cafe Manager server, a Windows service, connects to the front desk browser, gaming PCs with lock agents, Samsung TVs and a receipt printer" style="width:100%;height:100%">
+              <g font-family="IBM Plex Mono, monospace" stroke-width="2">
+                <path d="M320 150 L120 70 M320 150 L520 70 M320 210 L120 290 M320 210 L520 290" fill="none" stroke="var(--muted)"/>
+                <rect x="220" y="140" width="200" height="80" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"/><text x="320" y="176" text-anchor="middle" font-size="17" fill="var(--fg)">Cafe Manager</text><text x="320" y="196" text-anchor="middle" font-size="17" fill="var(--fg)">Windows service</text>
+                <rect x="30" y="40" width="180" height="60" rx="8" fill="var(--surface)" stroke="var(--line)"/><text x="120" y="66" text-anchor="middle" font-size="16" fill="var(--fg)">Front desk</text><text x="120" y="86" text-anchor="middle" font-size="16" fill="var(--fg)">browser</text>
+                <rect x="430" y="40" width="180" height="60" rx="8" fill="var(--surface)" stroke="var(--line)"/><text x="520" y="66" text-anchor="middle" font-size="16" fill="var(--fg)">Gaming PCs</text><text x="520" y="86" text-anchor="middle" font-size="16" fill="var(--fg)">lock agent</text>
+                <rect x="30" y="260" width="180" height="60" rx="8" fill="var(--surface)" stroke="var(--line)"/><text x="120" y="286" text-anchor="middle" font-size="16" fill="var(--fg)">Samsung TVs</text><text x="120" y="306" text-anchor="middle" font-size="16" fill="var(--fg)">Wake-on-LAN</text>
+                <rect x="430" y="260" width="180" height="60" rx="8" fill="var(--surface)" stroke="var(--line)"/><text x="520" y="286" text-anchor="middle" font-size="16" fill="var(--fg)">Receipt printer</text><text x="520" y="306" text-anchor="middle" font-size="16" fill="var(--fg)">ESC/POS</text>
+              </g>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Cafe Manager</h3>
+            <p>Management software for a small gaming cafe that runs on one server in the cafe, with no internet needed. Staff start timed sessions from a browser; a lock agent on each Windows PC unlocks for the session and locks again when time runs out, and Samsung TVs power off at expiry. POS with receipts, customer balances, reports, nightly backups and PowerShell installers. Released as v1.0; not yet in use at a cafe.</p>
+            <ul class="chips"><li>C#</li><li>.NET 10</li><li>ASP.NET Core / Blazor</li><li>WPF</li><li>SignalR</li><li>SQLite</li><li>PowerShell</li></ul>
+            <div class="card-links"><span class="tag-private">source private</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media contain">
+            <svg viewBox="0 0 640 360" role="img" aria-label="Every Mind Matters" style="width:100%;height:100%">
+              <text x="320" y="165" text-anchor="middle" fill="var(--fg)" font-family="Bricolage Grotesque, sans-serif" font-size="44" font-weight="600">Every Mind Matters</text>
+              <text x="320" y="210" text-anchor="middle" fill="var(--muted)" font-family="IBM Plex Mono, monospace" font-size="18">counselling · coaching · wellness</text>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Every Mind Matters</h3>
+            <p>The website and booking system for a mental health and wellness practice: service pages, a professionals directory, and a booking API with Google Calendar slots, PayHere checkout and confirmation emails, deployed as a non-root Docker container on my own server. Pre-launch, with payments in test mode.</p>
+            <ul class="chips"><li>HTML / CSS / JS</li><li>Node.js</li><li>Booking API</li><li>Docker</li></ul>
+            <div class="card-links">
+              <a href="https://github.com/dylenq/emm_coming_soon">Repository</a>
+              <span class="tag-private">pre-launch</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media contain">
+            <svg viewBox="0 0 640 360" role="img" aria-label="Lovelle" style="width:100%;height:100%">
+              <text x="320" y="165" text-anchor="middle" fill="var(--fg)" font-family="Bricolage Grotesque, sans-serif" font-size="48" font-weight="600">Lovelle</text>
+              <text x="320" y="210" text-anchor="middle" fill="var(--muted)" font-family="IBM Plex Mono, monospace" font-size="18">online gift shop · Homagama</text>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Lovelle</h3>
+            <p>An online gift shop for a retailer in Homagama: storefront, gift and delivery checkout with scheduled dates, order tracking, and an owner back office with stock tracking. Packaged with Docker and deployed to my server for testing. Client project, pre-launch.</p>
+            <ul class="chips"><li>Next.js</li><li>React</li><li>Prisma</li><li>Tailwind CSS</li><li>Docker</li></ul>
+            <div class="card-links"><span class="tag-private">client project · pre-launch</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media">
+            <img src="assets/billiards.png" alt="Billiards Pub's tables dashboard with live timers and running charges" loading="lazy" width="1200" height="750">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Billiards Pub</h3>
+            <p>A billing and management app used by a local billiards pub. Live table timers, tabs for food and drinks, receipts, expenses, stock control, customer credit with balances and repayments, date-range reports with CSV export and PIN-based staff roles. One PC, one SQLite file, no internet needed.</p>
+            <ul class="chips"><li>Node.js</li><li>React</li><li>Built-in SQLite</li><li>Docker</li></ul>
+            <div class="card-links"><span class="tag-private">source private</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media contain">
+            <svg viewBox="0 0 640 360" role="img" aria-label="A small touchscreen panel with tiles for the air conditioner, music, forecast and server log" style="width:100%;height:100%">
+              <g font-family="IBM Plex Mono, monospace" stroke-width="2">
+                <rect x="170" y="30" width="300" height="300" rx="18" fill="var(--surface)" stroke="var(--line)"/>
+                <rect x="195" y="55" width="120" height="115" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"/><text x="255" y="108" text-anchor="middle" font-size="18" fill="var(--fg)">AC</text><text x="255" y="128" text-anchor="middle" font-size="18" fill="var(--fg)">24°C</text>
+                <rect x="325" y="55" width="120" height="115" rx="8" fill="var(--surface)" stroke="var(--line)"/><text x="385" y="108" text-anchor="middle" font-size="18" fill="var(--fg)">Music</text><text x="385" y="128" text-anchor="middle" font-size="18" fill="var(--fg)">playing</text>
+                <rect x="195" y="185" width="120" height="120" rx="8" fill="var(--surface)" stroke="var(--line)"/><text x="255" y="241" text-anchor="middle" font-size="18" fill="var(--fg)">Forecast</text><text x="255" y="261" text-anchor="middle" font-size="18" fill="var(--fg)">3 days</text>
+                <rect x="325" y="185" width="120" height="120" rx="8" fill="var(--surface)" stroke="var(--line)"/><text x="385" y="241" text-anchor="middle" font-size="18" fill="var(--fg)">Server</text><text x="385" y="261" text-anchor="middle" font-size="18" fill="var(--fg)">log</text>
+              </g>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">ESP32 home panel</h3>
+            <p>A touch control centre on a cheap ESP32 board with a 2.4-inch screen, running ESPHome with an LVGL interface. It controls the air conditioner and Music Assistant players through Home Assistant, browses the music library, shows a three-day forecast, and doubles as a log console for the home server over USB serial.</p>
+            <ul class="chips"><li>ESPHome</li><li>LVGL</li><li>ESP32</li><li>Home Assistant</li><li>Music Assistant</li></ul>
+            <div class="card-links"><span class="tag-private">source private</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-repo="dylenq/yeetfin-releases">
+          <div class="card-media contain">
+            <picture>
+              <source srcset="assets/yeetfin-dark.png" media="(prefers-color-scheme: dark)">
+              <img src="assets/yeetfin-light.png" alt="YeetFin logo banner" loading="lazy" width="800" height="232">
+            </picture>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">YeetFin</h3>
+            <p>A cross-platform Jellyfin client built on Flutter, forked from Fladder and preconfigured for my own Jellyfin and Jellyseerr servers. Direct, transcoded and offline playback, intro skipping, trickplay scrubbing and comic-book reading. I added custom branding, a Jellyseerr search-and-request shortcut and secure storage for account secrets.</p>
+            <ul class="chips"><li>Flutter</li><li>Dart</li><li>Kotlin</li><li>Swift</li><li>C++</li></ul>
+            <div class="card-links">
+              <a href="https://github.com/dylenq/yeetfin-releases">Releases</a>
+              <span class="tag-private">source private</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media portrait">
+            <picture>
+              <source srcset="assets/bhasha-dark.jpg" media="(prefers-color-scheme: dark)">
+              <img src="assets/bhasha-light.jpg" alt="Bhasha's learn screen with a path of lessons" loading="lazy" width="369" height="800">
+            </picture>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Bhasha (භාෂා)</h3>
+            <p>A Duolingo-style app with two courses: English for Sinhala speakers, with the interface in Sinhala, and spoken Sinhala for English speakers, with romanization under the script. Works fully offline and keeps progress on the device.</p>
+            <ul class="chips"><li>Expo</li><li>React Native</li><li>TypeScript</li><li>Expo Router</li></ul>
+            <div class="card-links"><span class="tag-private">source private</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <section id="projects">
     <div class="wrap">
-      <h2>Featured projects</h2>
-      <p class="section-intro">Four native apps for audio and video, all open source. Stars and release tags update live from GitHub.</p>
+      <h2>Open-source apps</h2>
+      <p class="section-intro">Four native apps for audio and video, with source on GitHub. Stars and release tags update live from GitHub.</p>
       <div class="projects">
 
         <article class="card" data-repo="dylenq/macos-parametric-eq">
@@ -105,12 +281,12 @@
           </div>
           <div class="card-body">
             <h3 class="card-title"><img src="assets/eq-macos-icon.png" alt="">EQ for macOS</h3>
-            <p>A free system-wide parametric equalizer for every sound your Mac plays. No audio driver, no kernel extension, no account. Drag points on a frequency-response curve and hear the change at once.</p>
-            <ul class="chips"><li>Rust</li><li>egui</li><li>Core Audio process taps</li><li>DSP</li><li>Apple silicon + Intel</li></ul>
+            <p>A free system-wide parametric equalizer for every sound your Mac plays. No audio driver, no kernel extension, no account. Drag points on a frequency-response curve and hear the change at once, run a frequency sweep to find where your speakers ring, and compare settings with a volume-matched A/B.</p>
+            <ul class="chips"><li>Rust</li><li>egui</li><li>Core Audio process taps</li><li>DSP</li><li>CodeQL</li><li>Apple silicon</li></ul>
             <div class="card-links">
               <a href="https://github.com/dylenq/macos-parametric-eq">Repository</a>
               <a href="https://dylenq.github.io/macos-parametric-eq/">Website</a>
-              <a href="https://github.com/dylenq/macos-parametric-eq/releases/latest">Download <span data-release>v0.4.0</span></a>
+              <a href="https://github.com/dylenq/macos-parametric-eq/releases/latest">Download <span data-release>v0.6.0</span></a>
             </div>
             <div class="card-meta"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><span data-stars>2</span> stars</span><span>macOS 14.2+</span></div>
           </div>
@@ -122,12 +298,12 @@
           </div>
           <div class="card-body">
             <h3 class="card-title">capture-stream</h3>
-            <p>Play a PS4, PS5, Switch or Xbox from another room. A USB capture card on a Linux box forwards MJPEG frames unchanged to a native Mac app that decodes them with Apple's hardware JPEG decoder. About 12 ms of video delay at 1080p60.</p>
-            <ul class="chips"><li>Swift</li><li>SwiftUI</li><li>V4L2 / UVC</li><li>MJPEG</li><li>Linux daemon</li></ul>
+            <p>Play a PS4, PS5, Switch or Xbox from another room. A USB capture card on a Linux box forwards MJPEG frames unchanged to a native Mac app that decodes them in hardware, with optional MetalFX upscaling. About 12 ms of video delay at 720p60, and a controller connected to the Mac can drive a PS4 over WebRTC.</p>
+            <ul class="chips"><li>Swift</li><li>SwiftUI</li><li>V4L2 / UVC</li><li>MJPEG</li><li>WebRTC</li><li>MetalFX</li><li>Linux daemon</li></ul>
             <div class="card-links">
               <a href="https://github.com/dylenq/capture-stream">Repository</a>
               <a href="https://dylenq.github.io/capture-stream/">Website</a>
-              <a href="https://github.com/dylenq/capture-stream/releases/latest">Download <span data-release>v0.2.0</span></a>
+              <a href="https://github.com/dylenq/capture-stream/releases/latest">Download <span data-release>v0.3.0</span></a>
             </div>
             <div class="card-meta"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><span data-stars>0</span> stars</span><span>Mac app + Linux server</span></div>
           </div>
@@ -181,116 +357,6 @@
     </div>
   </section>
 
-  <section id="more">
-    <div class="wrap">
-      <h2>More work</h2>
-      <p class="section-intro">Infrastructure, web apps, a media client and a language course. Some of these have private source; the ones with a public home are linked.</p>
-      <div class="projects more">
-
-        <article class="card" data-repo="dylenq/yeetfin-releases">
-          <div class="card-media contain">
-            <picture>
-              <source srcset="assets/yeetfin-dark.png" media="(prefers-color-scheme: dark)">
-              <img src="assets/yeetfin-light.png" alt="YeetFin logo banner" loading="lazy" width="800" height="232">
-            </picture>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">YeetFin</h3>
-            <p>A cross-platform Jellyfin client built on Flutter, forked from Fladder and preconfigured for my own Jellyfin and Jellyseerr servers. Direct, transcoded and offline playback, intro skipping, trickplay scrubbing and comic-book reading. I added custom branding and animated splash screens.</p>
-            <ul class="chips"><li>Flutter</li><li>Dart</li><li>Kotlin</li><li>Swift</li><li>C++</li></ul>
-            <div class="card-links">
-              <a href="https://github.com/dylenq/yeetfin-releases">Releases</a>
-              <span class="tag-private">source private</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-media contain">
-            <svg viewBox="0 0 640 360" role="img" aria-label="Diagram: Cloudflare DNS and Tailscale reach Nginx Proxy Manager, which routes to six media containers, while Pi-hole handles DNS for the whole network" style="width:100%;height:100%">
-              <g font-family="IBM Plex Mono, monospace" stroke-width="2">
-                <path d="M174 68 L214 110 M174 152 L214 110 M364 110 L420 110" fill="none" stroke="var(--muted)"/>
-                <rect x="24" y="40" width="150" height="56" rx="8" fill="var(--surface)" stroke="var(--line)"/>
-                <text x="99" y="74" text-anchor="middle" font-size="19" fill="var(--fg)">Cloudflare</text>
-                <rect x="24" y="124" width="150" height="56" rx="8" fill="var(--surface)" stroke="var(--line)"/>
-                <text x="99" y="158" text-anchor="middle" font-size="19" fill="var(--fg)">Tailscale</text>
-                <rect x="214" y="78" width="150" height="64" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"/>
-                <text x="289" y="106" text-anchor="middle" font-size="17" fill="var(--fg)">Nginx Proxy</text>
-                <text x="289" y="128" text-anchor="middle" font-size="17" fill="var(--fg)">Manager</text>
-                <text x="420" y="40" font-size="14" fill="var(--muted)">20+ containers</text>
-                <g fill="var(--surface)" stroke="var(--line)">
-                  <rect x="420" y="56" width="100" height="44" rx="6"/><rect x="530" y="56" width="100" height="44" rx="6"/>
-                  <rect x="420" y="112" width="100" height="44" rx="6"/><rect x="530" y="112" width="100" height="44" rx="6"/>
-                  <rect x="420" y="168" width="100" height="44" rx="6"/><rect x="530" y="168" width="100" height="44" rx="6"/>
-                </g>
-                <g font-size="14" fill="var(--fg)" text-anchor="middle" stroke="none">
-                  <text x="470" y="83">Jellyfin</text><text x="580" y="83">Sonarr</text>
-                  <text x="470" y="139">Radarr</text><text x="580" y="139">Prowlarr</text>
-                  <text x="470" y="195">Bazarr</text><text x="580" y="195">Jellyseerr</text>
-                </g>
-                <rect x="24" y="252" width="606" height="52" rx="8" fill="var(--accent-soft)" stroke="var(--accent)"/>
-                <text x="327" y="284" text-anchor="middle" font-size="18" fill="var(--fg)">Pi-hole · DNS filtering for the whole network</text>
-              </g>
-            </svg>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Self-hosted home server</h3>
-            <p>An Ubuntu Server box running 20+ containers with Docker Compose. A fully automated media pipeline takes a request through download and subtitle fixing into the Jellyfin library. Pi-hole filters DNS for the whole network, Nginx Proxy Manager serves internal apps on public domains with SSL, and Tailscale connects it all. I also tracked down and closed an IPv6 DNS leak through the router's RADVD and DHCPv6 settings.</p>
-            <ul class="chips"><li>Ubuntu Server 24.04</li><li>Docker Compose</li><li>Pi-hole</li><li>Nginx Proxy Manager</li><li>Tailscale</li><li>Home Assistant</li></ul>
-            <div class="card-links">
-              <a href="https://play.yeetserver.org/web/#/home">Live demo (logins on request)</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-media contain">
-            <svg viewBox="0 0 640 360" role="img" aria-label="Every Mind Matters" style="width:100%;height:100%">
-              <text x="320" y="165" text-anchor="middle" fill="var(--fg)" font-family="Bricolage Grotesque, sans-serif" font-size="44" font-weight="600">Every Mind Matters</text>
-              <text x="320" y="210" text-anchor="middle" fill="var(--muted)" font-family="IBM Plex Mono, monospace" font-size="18">counselling · coaching · wellness</text>
-            </svg>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Every Mind Matters</h3>
-            <p>The public website and booking flow for a mental health and wellness practice: service pages, a professionals directory, a journal, a booking API with confirmation and cancellation pages, and a Docker setup for self-hosting.</p>
-            <ul class="chips"><li>HTML / CSS / JS</li><li>Booking API</li><li>Docker</li><li>Vercel</li></ul>
-            <div class="card-links">
-              <a href="https://emm-jet.vercel.app">Live site</a>
-              <a href="https://github.com/dylenq/emm_coming_soon">Repository</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-media portrait">
-            <picture>
-              <source srcset="assets/bhasha-dark.jpg" media="(prefers-color-scheme: dark)">
-              <img src="assets/bhasha-light.jpg" alt="Bhasha's learn screen with a path of lessons" loading="lazy" width="369" height="800">
-            </picture>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Bhasha (භාෂා)</h3>
-            <p>A Duolingo-style app with two courses: English for Sinhala speakers, with the interface in Sinhala, and spoken Sinhala for English speakers, with romanization under the script. Works fully offline and keeps progress on the device.</p>
-            <ul class="chips"><li>Expo</li><li>React Native</li><li>TypeScript</li><li>Expo Router</li></ul>
-            <div class="card-links"><span class="tag-private">source private</span></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-media">
-            <img src="assets/billiards.png" alt="Billiards Pub's tables dashboard with live timers and running charges" loading="lazy" width="1200" height="750">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Billiards Pub</h3>
-            <p>An offline billing and management app for a pool hall. Live table timers, tabs for food and drinks, receipts, expenses, date-range reports with CSV export and PIN-based staff roles. One PC, one SQLite file, no internet needed.</p>
-            <ul class="chips"><li>Node.js</li><li>Built-in SQLite</li><li>Browser UI</li><li>Docker</li></ul>
-            <div class="card-links"><span class="tag-private">source private</span></div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
 
   <section id="experience">
     <div class="wrap">
@@ -300,11 +366,22 @@
         <article class="job">
           <p class="when">2025 – present</p>
           <div>
-            <h3>Full-Stack Developer</h3>
+            <h3>Full-Stack Developer and IT Support (freelance)</h3>
             <p class="org">Every Mind Matters</p>
             <ul>
-              <li>Built the organisation's website from scratch, including booking support and calendar integrations.</li>
-              <li>Manage all ongoing IT for the practice.</li>
+              <li>Developed the organisation's website from an initial draft and built its booking and payment system: Google Calendar slots, PayHere checkout, and automatic calendar events and confirmation emails. Pre-launch.</li>
+              <li>Deployed it as a non-root Docker container behind Cloudflare, with a launch, backup and rollback runbook.</li>
+              <li>Manage the organisation's domain and DNS, and support staff with their devices.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <p class="when">2026</p>
+          <div>
+            <h3>Freelance Web Developer</h3>
+            <p class="org">Lovelle, Homagama</p>
+            <ul>
+              <li>Built an online gift shop with gift and delivery checkout, order tracking and an owner back office with stock tracking. Pre-launch.</li>
             </ul>
           </div>
         </article>
@@ -324,8 +401,8 @@
             <h3>IT Administrator</h3>
             <p class="org">Cloud Gaming Lounge</p>
             <ul>
-              <li>Built a fully automated system for installations, updates, monitoring and usage statistics across 20+ machines.</li>
-              <li>Networked every system for an uninterrupted gaming experience.</li>
+              <li>Built an automated system for installations, updates, monitoring and usage statistics across 20+ machines.</li>
+              <li>Networked all systems to keep gaming sessions running without interruption.</li>
             </ul>
           </div>
         </article>
@@ -335,7 +412,7 @@
             <h3>IT Administrator</h3>
             <p class="org">Alpha Gaming Lounge</p>
             <ul>
-              <li>Set up automated installation, update and monitoring workflows across 10+ machines with minimal downtime.</li>
+              <li>Set up automated installation, update and monitoring workflows across 10+ machines.</li>
               <li>Built the network and the usage-statistics tracking.</li>
             </ul>
           </div>
@@ -361,12 +438,12 @@
         <p class="edu-title">BSc (Hons) Information Technology</p>
         <p class="edu-meta">NSBM Green University, affiliated with Victoria University, Melbourne · 2021 – 2025</p>
         <p class="edu-meta">Coursework included UiPath RPA workflows for attendance tracking and currency conversion.</p>
-        <p class="edu-meta">GCE Ordinary Levels, Wesley College · 2018</p>
+        <p class="edu-meta">GCE Ordinary Level, Wesley College · 2018</p>
       </div>
       <div>
         <h3>Languages</h3>
         <p class="edu-title">English · Sinhala</p>
-        <p class="edu-meta">Expert level in both.</p>
+        <p class="edu-meta">Fluent in both.</p>
       </div>
     </div>
   </section>
@@ -378,19 +455,19 @@
       <div class="skills">
         <div>
           <h3>Languages</h3>
-          <ul class="chips"><li>Rust</li><li>Swift</li><li>Kotlin</li><li>TypeScript</li><li>Dart</li><li>Python</li><li>Shell</li><li>SQL</li><li>HTML / CSS</li></ul>
+          <ul class="chips"><li>C#</li><li>Rust</li><li>Swift</li><li>Kotlin</li><li>TypeScript</li><li>Dart</li><li>Python</li><li>Bash</li><li>PowerShell</li><li>SQL</li><li>HTML / CSS</li></ul>
         </div>
         <div>
           <h3>Frameworks and platforms</h3>
-          <ul class="chips"><li>SwiftUI</li><li>Jetpack Compose</li><li>egui</li><li>React Native / Expo</li><li>Flutter</li><li>Node.js</li><li>GitHub Actions</li><li>UiPath RPA</li></ul>
+          <ul class="chips"><li>.NET / ASP.NET Core</li><li>Blazor</li><li>WPF</li><li>Next.js</li><li>SwiftUI</li><li>Jetpack Compose</li><li>egui</li><li>React Native / Expo</li><li>Flutter</li><li>Node.js</li><li>GitHub Actions</li><li>UiPath RPA</li></ul>
         </div>
         <div>
           <h3>Systems and networking</h3>
           <ul class="chips"><li>Ubuntu Server</li><li>systemd and SSH</li><li>Docker Compose</li><li>Portainer</li><li>CasaOS</li><li>Pi-hole</li><li>DHCP and DNS</li><li>IPv4 / IPv6 troubleshooting</li><li>Nginx Proxy Manager</li><li>Cloudflare</li><li>Tailscale</li><li>Home Assistant</li></ul>
         </div>
         <div>
-          <h3>Audio, media and data</h3>
-          <ul class="chips"><li>Audio DSP and biquad filters</li><li>Core Audio process taps</li><li>Android audio effects</li><li>V4L2 / UVC capture</li><li>MJPEG streaming</li><li>USB device protocols</li><li>REST API integration</li><li>SQLite</li></ul>
+          <h3>Devices, media and data</h3>
+          <ul class="chips"><li>Audio DSP and biquad filters</li><li>Core Audio process taps</li><li>Android audio effects</li><li>V4L2 / UVC capture</li><li>MJPEG streaming</li><li>USB and serial devices</li><li>Wake-on-LAN</li><li>ESC/POS printing</li><li>REST API integration</li><li>SQLite</li></ul>
         </div>
       </div>
     </div>
@@ -413,7 +490,7 @@
 <footer>
   <div class="wrap">
     <span>© 2026 Dylen Quyn</span>
-    <span>Built by hand with HTML, CSS and a little JavaScript. No framework. <a href="https://github.com/dylenq/dylenq.github.io">Source</a></span>
+    <span>Plain HTML, CSS and a little JavaScript. No framework. <a href="https://github.com/dylenq/dylenq.github.io">Source</a></span>
   </div>
 </footer>
 
